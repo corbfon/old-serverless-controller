@@ -5,7 +5,7 @@ const { trim } = require('../../util/schema-setters')
 const schema = {
   title: { type: String, index: 'text', required: true, set: trim },
   description: { type: String, default: '' },
-  html: { type: String, default: '' },
+  lesson_ids: { type: [Schema.Types.ObjectId], default: [] },
 }
 
-module.exports = createModel('lessons', schema, (s) => {})
+module.exports = createModel('modules', schema, (s) => {})
